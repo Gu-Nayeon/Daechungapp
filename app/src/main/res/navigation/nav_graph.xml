@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/first_fragment"
+    android:id="@+id/nav_graph">
+
+    <keep_state_fragment
+        android:id="@+id/first_fragment"
+        android:name="com.nayeon.daechungapp2.FirstFragment"
+        app:popUpToSaveState="true"
+        tools:layout="@layout/fragment_first"
+        android:label="FirstFragment" >
+
+
+        <action
+            android:id="@+id/action_first_fragment_to_service_detail_fragment"
+            app:destination="@id/service_job_fragment" />
+
+
+    </keep_state_fragment>
+
+
+    <keep_state_fragment
+        android:id="@+id/service_job_fragment"
+        android:name="com.nayeon.daechungapp2.ServiceJobFragment"
+        app:popUpToSaveState="true"
+        tools:layout="@layout/fragment_service_job"
+        android:label="ServiceJobFragment" >
+        <action
+            android:id="@+id/action_service_detail_fragment_to_service_support_fragment"
+            app:destination="@id/service_support_fragment" />
+        <action
+            android:id="@+id/action_service_job_fragment_to_service_plan_fragment"
+            app:destination="@id/service_plan_fragment" />
+    </keep_state_fragment>
+
+    <keep_state_fragment
+        android:id="@+id/service_support_fragment"
+        android:name="com.nayeon.daechungapp2.ServiceSupportFragment"
+        app:popUpToSaveState="true"
+        tools:layout="@layout/fragment_service_support"
+        android:label="ServiceSupportFragment" />
+
+    <keep_state_fragment
+        android:id="@+id/second_fragment"
+        android:name="com.nayeon.daechungapp2.SecondFragment"
+        app:popUpToSaveState="true"
+        tools:layout="@layout/fragment_second"
+        android:label="SecondFragment" />
+
+    <keep_state_fragment
+        android:id="@+id/third_fragment"
+        android:name="com.nayeon.daechungapp2.ThirdFragment"
+        app:popUpToSaveState="true"
+        tools:layout="@layout/fragment_third"
+        android:label="ThirdFragment" />
+    <keep_state_fragment
+        android:id="@+id/service_plan_fragment"
+        android:name="com.nayeon.daechungapp2.SerivcePlanFragment"
+        app:popUpToSaveState="true"
+        tools:layout="@layout/fragment_serivce_plan"
+        android:label="SerivcePlanFragment" />
+
+
+
+
+
+
+
+
+</navigation>
